@@ -1,4 +1,4 @@
-{% set version = '0.5.7' %}
+{% set version = "0.5.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidytable_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidytable/tidytable_{{ version }}.tar.gz
-  sha256: 42d81a2999aa9e6344c5c2eeee25703d8ca3dd0fcb81ea73ac1a99341c7b4008
+  sha256: 807111ba21c4490c5a0df8f071a96539709b4c052765b9054b8b27e9507d5013
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -52,11 +52,10 @@ test:
 about:
   home: https://github.com/markfairbanks/tidytable
   license: MIT
-  summary: A tidy interface to 'data.table' that is 'rlang' compatible, giving users the speed
-    of 'data.table' with the clean syntax of the tidyverse.
+  summary: A tidy interface to 'data.table' that is 'rlang' compatible, giving users the speed of 'data.table' with the clean syntax of the tidyverse.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
