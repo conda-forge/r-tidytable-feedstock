@@ -1,4 +1,4 @@
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidytable_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidytable/tidytable_{{ version }}.tar.gz
-  sha256: 99e7f2e13e739ca1b6967b873f2e32b4387c6b91ff8a01ad7d570840290ce8d0
+  sha256: 0851a60e927092c2099114c76389cf48932bc3b68c781c069b028b4792310f3e
 
 build:
   merge_build_host: true  # [win]
