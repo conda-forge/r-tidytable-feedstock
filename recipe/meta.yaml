@@ -1,4 +1,4 @@
-{% set version = "0.6.7" %}
+{% set version = "0.7.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidytable_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidytable/tidytable_{{ version }}.tar.gz
-  sha256: a5d725c237b719bd947ea0437d7ade0cca8b24cec1ad7003f3b708cf750b1d7c
+  sha256: e309df815484edfe0a2708890f66dbde6f2efde4f64957106dd6f9cdcbc34c91
 
 build:
   merge_build_host: true  # [win]
@@ -23,26 +23,27 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-data.table >=1.12.6
     - r-glue >=1.4.0
     - r-lifecycle >=0.2.0
     - r-magrittr >=1.5
-    - r-rlang >=0.4.7
-    - r-tibble >=2.1.3
+    - r-pillar >=1.5.0
+    - r-rlang >=1.0.0
     - r-tidyselect >=1.1.0
-    - r-vctrs >=0.3.5
+    - r-vctrs >=0.3.8
   run:
     - r-base
     - r-data.table >=1.12.6
     - r-glue >=1.4.0
     - r-lifecycle >=0.2.0
     - r-magrittr >=1.5
-    - r-rlang >=0.4.7
-    - r-tibble >=2.1.3
+    - r-pillar >=1.5.0
+    - r-rlang >=1.0.0
     - r-tidyselect >=1.1.0
-    - r-vctrs >=0.3.5
+    - r-vctrs >=0.3.8
 
 test:
   commands:
