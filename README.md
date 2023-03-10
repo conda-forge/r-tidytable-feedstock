@@ -1,11 +1,11 @@
-About r-tidytable
-=================
+About r-tidytable-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tidytable-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/markfairbanks/tidytable
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tidytable-feedstock/blob/main/LICENSE.txt)
 
 Summary: A tidy interface to 'data.table' that is 'rlang' compatible, giving users the speed of 'data.table' with the clean syntax of the tidyverse.
 
